@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Buttons.css">
+</head>
+<body>
+    <div class="button-grid">
+    <button class="btn btn-1">Button 1</button><br>
+    <button class="btn btn-2">Button 2</button><br>   
+    <button class="btn btn-3">Button 3</button><br>
+    <button class="btn btn-4">Button 4</button><br>  
+    <button class="btn btn-5">Button 5</button><br>
+    <button class="btn btn-6">Button 6</button><br>
+    <button class="btn btn-7">Button 7</button><br>
+    <button class="btn btn-8">Button 8</button><br>
+    <button class="btn btn-9">Button 9</button><br>
+    <button class="btn btn-10">Button 10</button><br>
+    <button class="btn btn-11">Button 11</button><br>
+    <button class="btn btn-12">Button 12</button><br>
+    
+    </div>
+    <!-- btn7 -->
+    <script>
+document.querySelectorAll('.btn-7').forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    for (let i = 0; i < 6; i++) {
+      const bubble = document.createElement('span');
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.width = `${8 + Math.random() * 8}px`;
+      bubble.style.height = bubble.style.width;
+      bubble.style.animationDuration = `${1 + Math.random()}s`;
+      button.appendChild(bubble);
+
+      setTimeout(() => bubble.remove(), 1500);
+    }
+  });
+});
+</script>
+
+<!-- btn8 -->
+
+<script>
+document.querySelectorAll('.btn-8').forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    for (let i = 0; i < 10; i++) {
+      const spark = document.createElement('span');
+      spark.style.left = `${Math.random() * 100}%`;
+      spark.style.width = `${4 + Math.random() * 4}px`;
+      spark.style.height = spark.style.width;
+      spark.style.animationDuration = `${0.6 + Math.random() * 0.5}s`;
+      button.appendChild(spark);
+
+      setTimeout(() => spark.remove(), 1000);
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>
